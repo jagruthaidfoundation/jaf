@@ -1,0 +1,414 @@
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    .cursive-left-white {
+      text-align: left;
+      font-size: 16px;
+      color: #f0f0f0;
+    }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section:target::before {
+    content: "";
+    display: block;
+    height: 100px; /* height of your sticky header */
+    margin-top: -100px;
+  }
+  </style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAGRUTH AID FOUNDATION</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .dropdown:hover .dropdown-menu { display: block; white-space: nowrap; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){ emailjs.init("nMUt53wjMTd3huitn"); })();
+  </script>
+</head>
+<body class="bg-[#fef9f3] text-gray-800">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Trust Icon" class="w-28 h-28 object-cover rounded-full">
+        <div>
+          <h1 class="text-xl font-bold text-teal-700">JAGRUTH AID FOUNDATION</h1>
+          <!-- <p class="text-sm italic text-green-600 font-semibold">Where awareness meets with resistance</p> -->
+        </div>
+      </div>
+      <div class="md:hidden">
+        <button id="menuToggle" class="focus:outline-none">
+          <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-semibold text-teal-700">
+        <div class="relative group dropdown">
+          <button class="hover:text-green-700 whitespace-nowrap">About Us</button>
+          <div class="absolute hidden group-hover:block bg-white shadow rounded dropdown-menu text-sm">
+            <a href="#story" class="block px-4 py-2 hover:bg-teal-100 whitespace-nowrap">Our Story</a>
+            <a href="#board" class="block px-4 py-2 hover:bg-teal-100 whitespace-nowrap">Our Board of Trustees</a>
+            <a href="#governance" class="block px-4 py-2 hover:bg-teal-100 whitespace-nowrap">Governance</a>
+          </div>
+        </div>
+        <a href="#work" class="hover:text-green-700 whitespace-nowrap">Workshops & Events</a>
+        <a href="#contact" class="hover:text-green-700 whitespace-nowrap">Contact Us</a>
+        <a href="#join" class="hover:text-green-700 whitespace-nowrap">Join Us</a>
+        <a href="#donate" class="bg-teal-600 text-white px-4 py-1 rounded hover:bg-teal-700 whitespace-nowrap">Donate Now</a>
+      </nav>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2 text-teal-700 font-semibold">
+      <a href="#story" class="block">Our Story</a>
+      <a href="#board" class="block">Our Board of Trustees</a>
+      <a href="#governance" class="block">Governance</a>
+      <a href="#work" class="block">Workshops & Events</a>
+      <a href="#contact" class="block">Contact Us</a>
+      <a href="#join" class="block">Join Us</a>
+      <a href="#donate" class="block bg-teal-600 text-white px-4 py-2 rounded">Donate Now</a>
+    </div>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggleBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+
+  <!-- Hero Section with Background -->
+  <section class="text-center py-32 bg-cover bg-center bg-no-repeat text-white" style="background-image: url('images/homebg.jpg');">
+    <div class="bg-black bg-opacity-50 p-6 inline-block rounded">
+      <h2 class="text-4xl font-bold">Where awareness meets with resistance</h2>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section id="story" class="py-12 px-4 md:px-10 bg-[#e0f2f1]">
+    <h2 class="text-3xl font-bold text-teal-700 mb-4">Our Story</h2>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      Jagruth Aid Foundation, established in 2023 in Mumbai, is a non-profit charitable trust dedicated to improving lives through education, healthcare, disaster relief, and community development.<br><br>
+      The trust supports all citizens regardless of caste, creed, or religion. Our primary goals include providing support to orphans, widows, underprivileged children, the elderly, and physically/mentally challenged individuals. The trust operates exclusively within India and aims to foster unity and social welfare through grassroots action.
+    </p>
+  </section>
+
+
+  <!-- Our Board of Trustees (updated) -->
+  <section id="board" class="py-12 px-4 md:px-10 bg-black">
+    <h2 class="text-3xl font-bold mb-6 text-white text-center">Our Board of Trustees</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      
+      <!-- Trustee 1 -->
+      <div class="bg-gray-900 text-white p-6 rounded-lg shadow text-center">
+        <img src="images/kishan.jpg" class="mx-auto w-28 h-28 object-cover rounded-full mb-4" alt="Mr. Kishan Jaiswal" />
+        <h3 class="font-bold text-xl">Mr. Kishan Jaiswal</h3>
+        <p class="text-sm text-gray-300 mb-2">Trustee</p>
+        <button onclick="toggleDetails(this)" class="mx-auto flex items-center justify-center space-x-2 mt-2">
+          <img src="images/plus.png" alt="Expand" class="w-8 h-8">
+          <span class="text-xs text-teal-400">MORE</span>
+        </button>
+        <div class="expand-content mt-2 text-sm text-gray-200 hidden">
+         <p class="cursive-left-white">Advocate Kishan A.N. Jaiswal is a legal professional with an LLM degree, known for his commitment to social justice and his role as a trustee of the Jagruth Aid Foundation (JAF), a trust formed in 2023 to raise awareness on legal and social issues.</p>
+        </div>
+      </div>
+
+      <!-- Trustee 2 -->
+      <div class="bg-gray-900 text-white p-6 rounded-lg shadow text-center">
+        <img src="images/Chetan.jpg" class="mx-auto w-28 h-28 object-cover rounded-full mb-4" alt="Mr. Chetan Yadav" />
+        <h3 class="font-bold text-xl">Mr. Chetan Yadav</h3>
+        <p class="text-sm text-gray-300 mb-2">Secretary / Treasurer</p>
+        <button onclick="toggleDetails(this)" class="mx-auto flex items-center justify-center space-x-2 mt-2">
+          <img src="images/plus.png" alt="Expand" class="w-8 h-8">
+          <span class="text-xs text-teal-400">MORE</span>
+        </button>
+        <div class="expand-content mt-2 text-sm text-gray-200 hidden">
+            <p class="cursive-left-white">Advocate Chetan Laljee Yadav is a practicing lawyer in the Bombay High Court and various subordinate courts across India. Serving as the Secretary and Treasurer of Jagruth Aid Foundation (JAF), he combines his legal expertise with a passion for social activism. He is dedicated to promoting legal awareness, supporting senior citizens, uplifting underprivileged children, and ensuring that every child in need receives education. With integrity and compassion at the core of his work, he strives to create a society where justice and dignity are accessible to all.</p>
+        </div>
+      </div>
+
+      <!-- Trustee 3 -->
+      <div class="bg-gray-900 text-white p-6 rounded-lg shadow text-center">
+        <img src="images/Aniket.jpg" class="mx-auto w-28 h-28 object-cover rounded-full mb-4" alt="Mr. Aniket Vaity" />
+        <h3 class="font-bold text-xl">Mr. Aniket Pravin Vaity</h3>
+        <p class="text-sm text-gray-300 mb-2">Trustee</p>
+        <button onclick="toggleDetails(this)" class="mx-auto flex items-center justify-center space-x-2 mt-2 ">
+          <img src="images/plus.png" alt="Expand" class="w-8 h-8">
+          <span class="text-xs text-teal-400">MORE</span>
+        </button>
+        <div class="expand-content mt-2 text-sm text-gray-200 hidden">
+          <p class="cursive-left-white">Aniket Vaity is a passionate social worker devoted to serving society with compassion and purpose. He focuses on supporting underprivileged communities, empowering youth, and promoting education, equality, and dignity for all. Guided by empathy and responsibility, he envisions a more inclusive society and continues to inspire others to join in creating lasting change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleDetails(button) {
+      const card = button.parentElement;
+      const detail = card.querySelector('.expand-content');
+      detail.classList.toggle('hidden');
+      card.classList.toggle('expanded');
+    }
+  </script>
+
+
+
+  <section id="governance" class="py-12 px-4 md:px-10 bg-[#e8f5e9]">
+    <h2 class="text-3xl font-bold mb-6 text-green-700">Governance</h2>
+    <div class="bg-white shadow-lg rounded-lg p-6 md:p-10 border-l-8 border-green-600">
+  <h3 class="text-2xl font-semibold text-green-800 mb-4">Certificate of Registration</h3>
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-green-50 rounded">
+      <tbody class="text-left text-gray-700">
+        <tr class="border-b">
+          <th class="py-3 px-4 font-medium w-1/3">Document Type</th>
+          <td class="py-3 px-4">Certificate of Registration</td>
+        </tr>
+        <tr class="bg-green-100 border-b">
+          <th class="py-3 px-4 font-medium">Statement</th>
+          <td class="py-3 px-4">
+            It is hereby certified that the Public Trust described below has this day been duly registered under the Mumbai Public Trust Act, 1950 (BOM.XXIX of 1950) at the Public Trust Registration office Greater Mumbai Region
+          </td>
+        </tr>
+        <tr class="border-b">
+          <th class="py-3 px-4 font-medium">Name of the Public Trust</th>
+          <td class="py-3 px-4">JAGRUTH AID FOUNDATION</td>
+        </tr>
+        <tr class="bg-green-100 border-b">
+          <th class="py-3 px-4 font-medium">Number in the Register</th>
+          <td class="py-3 px-4">E-0038503(GBR)</td>
+        </tr>
+        <tr class="border-b">
+          <th class="py-3 px-4 font-medium">Certificate issued to</th>
+          <td class="py-3 px-4">KISHAN NAGENDRA JAISWAL</td>
+        </tr>
+        <tr class="bg-green-100 border-b">
+          <th class="py-3 px-4 font-medium">Date of Issue</th>
+          <td class="py-3 px-4">7 Day of December 2023</td>
+        </tr>
+        <tr class="border-b">
+          <th class="py-3 px-4 font-medium">Issuing Authority</th>
+          <td class="py-3 px-4">Asstt. Charity Commissioner, Greater Mumbai Region, Mumbai</td>
+        </tr>
+        <tr class="bg-green-100">
+          <th class="py-3 px-4 font-medium">Seal Information</th>
+          <td class="py-3 px-4">Joint Charity Commissioner, Greater Mumbai Region, Mumbai</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  </section>
+
+  <!-- Workshops & Events -->
+  <section id="work" class="py-12 px-4 md:px-10 bg-[#f1f8e9]">
+    <h2 class="text-3xl font-bold mb-6 text-green-800">Workshops & Events</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+   <!-- Work Card 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="images/comingsoon.jpg" alt="Work Preview 1" class="w-full h-80 object-cover">
+  <div class="p-4">
+    <h3 class="font-bold text-lg text-teal-700">Upcoming Initiative</h3>
+    <p class="text-gray-700 text-sm mt-2">Coming Soon: An event focused on the distribution of umbrellas to those in need during the rainy season.</p>
+  </div>
+</div>
+
+<!-- Work Card 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="images/comingsoon.jpg" alt="Work Preview 2" class="w-full h-80 object-cover">
+  <div class="p-4">
+    <h3 class="font-bold text-lg text-teal-700">Community Engagement Drive</h3>
+    <p class="text-gray-700 text-sm mt-2">Coming Soon: Empowering local communities through active participation and social development programs.</p>
+  </div>
+</div>
+
+<!-- Work Card 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="images/comingsoon.jpg" alt="Work Preview 3" class="w-full h-80 object-cover">
+  <div class="p-4">
+    <h3 class="font-bold text-lg text-teal-700">Health & Wellness Camps</h3>
+    <p class="text-gray-700 text-sm mt-2">Coming Soon: A series of wellness camps aimed at preventive care and holistic well-being.</p>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- Contact Us, Join Us, and Donate remain same with styles adjusted (already present in your original file) -->
+
+<!-- Contact Us -->
+<!-- Contact Us Section -->
+<section id="contact" class="py-16 px-6 md:px-16 bg-gradient-to-r from-[#3d365c] to-[#4a4a37] animate-fade-in">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <!-- Left Side Info -->
+    <div class="bg-[#3d365c] text-white p-8 rounded-lg shadow-xl">
+      <h2 class="text-4xl font-bold mb-6 border-b border-white pb-2">Contact Us</h2>
+      <p class="text-lg mb-4">
+        <strong>Address:</strong><br>
+        C/o Mr. Kishan Nagendra Jaiswal<br>
+        209, Aman Adarsh Nagar REH B-2,<br>
+        Chandawarkar Lane, Borivali West,<br>
+        Mumbai - 400 092, Maharashtra, India
+      </p>
+      <p class="text-lg mb-2"><strong>Email:</strong> jaf122023@gmail.com</p>
+      <p class="text-lg"><strong>Trust Contact Number:</strong> 9833770218</p>
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="bg-[#4a4a37] text-white p-8 rounded-lg shadow-xl">
+      <h2 class="text-4xl font-bold mb-6 text-center border-b border-white pb-2">Send Us a Message</h2>
+      <form id="contactForm" class="space-y-5 text-lg">
+        <div>
+          <label class="block font-semibold mb-1">Your Name:</label>
+          <input type="text" name="name" required class="w-full p-3 border rounded text-black" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Your Email:</label>
+          <input type="email" name="email" required class="w-full p-3 border rounded text-black" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Message:</label>
+          <textarea name="message" rows="4" required class="w-full p-3 border rounded text-black"></textarea>
+        </div>
+        <button type="submit" class="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 w-full">Send</button>
+        <p id="contactMessage" class="text-green-300 font-medium mt-2"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const formData = new FormData(form);
+
+    emailjs.send("service_5adzblm", "template_7i1lofp", {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message")
+    }).then(() => {
+      document.getElementById("contactMessage").innerText = "Your message has been sent to Trust members!";
+      form.reset();
+    }, (error) => {
+      document.getElementById("contactMessage").innerText = "Submission failed. Try again.";
+      console.error(error);
+    });
+  });
+</script>
+
+
+<section id="join" class="py-16 px-6 md:px-16 bg-[#4e9099] animate-fade-in">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  
+
+    <!-- Join Us Form Right Side -->
+    <div class="bg-white p-8 rounded-lg shadow-xl w-full">
+      <h2 class="text-4xl font-bold text-[#4e9099] mb-6 text-center">Join Us</h2>
+      <form id="joinForm" class="space-y-5 text-lg">
+        <div>
+          <label class="block font-semibold mb-1">Name:</label>
+          <input type="text" name="name" required class="w-full p-3 border rounded" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Address:</label>
+          <input type="text" name="address" required class="w-full p-3 border rounded" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Gender:</label>
+          <select name="gender" required class="w-full p-3 border rounded">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Email ID:</label>
+          <input type="email" name="email" required class="w-full p-3 border rounded" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Contact Number:</label>
+          <input type="tel" name="mobile" required class="w-full p-3 border rounded" />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Qualification:</label>
+          <input type="text" name="qualification" required class="w-full p-3 border rounded" />
+        </div>
+        <button type="submit" class="bg-[#4e9099] text-white px-6 py-2 rounded hover:bg-[#3c737b] w-full">Submit</button>
+        <p id="joinMessage" class="text-green-700 font-medium mt-2"></p>
+      </form>
+    </div>
+      <!-- Logo Left Side -->
+    <div class="flex justify-center">
+      <img src="images/logo.png" alt="Join Us Logo" class="w-100 h-auto rounded-lg shadow-lg">
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('joinForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const form = this;
+      const formData = new FormData(form);
+
+      emailjs.send("service_5adzblm", "template_ktrqc6c", {
+        name: formData.get("name"),
+        address: formData.get("address"),
+        gender: formData.get("gender"),
+        email: formData.get("email"),
+        mobile: formData.get("mobile"),
+        qualification: formData.get("qualification")
+      }).then(() => {
+        document.getElementById("joinMessage").innerText = "Your Join request has been sent to Trust members!";
+        form.reset();
+      }, (error) => {
+        document.getElementById("joinMessage").innerText = "Submission failed. Try again.";
+        console.error(error);
+      });
+    });
+  </script>
+</section>
+
+  <!-- Donate Section -->
+<section id="donate" class="py-16 px-6 md:px-16 bg-gradient-to-r from-[#14532d] via-[#16624B] to-[#051c05] animate-fade-in">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+    <!-- LEFT Section: Caption + UPI -->
+    <div class="bg-[#051c05] text-white rounded-lg p-8 shadow-lg">
+      <h2 class="text-5xl font-extrabold mb-6 border-b border-white pb-2">Donate</h2>
+      <p class="text-xl leading-loose mb-8">
+        In the quiet act of trusting through donation, we affirm that some truths are greater than our immediate perceptions – the truth of compassion, the truth of shared destiny, the truth of a better world made possible by collective belief.
+      </p>
+      <p class="text-2xl font-bold bg-white bg-opacity-10 p-4 rounded-md shadow-md text-white">GPay UPI ID: <span class="text-teal-300">jagruthaid@upi</span></p>
+    </div>
+
+    <!-- RIGHT Section: QR Code -->
+    <div class="bg-[#14532d] flex items-center justify-center rounded-lg p-6 shadow-xl hover:scale-105 transition-transform duration-500">
+      <img src="images/payscan.jpg" alt="UPI QR Code" class="max-w-xs border-4 border-white rounded-md shadow-2xl">
+    </div>
+  </div>
+</section>
+
+  <footer class="bg-gradient-to-r from-teal-800 to-green-800 text-white text-center py-4">
+    &copy; 2025 JAGRUTH AID FOUNDATION. All rights reserved.
+  </footer>
+</body>
+</html>
+
+<script>
+  // Close mobile menu when a link is clicked
+  document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
